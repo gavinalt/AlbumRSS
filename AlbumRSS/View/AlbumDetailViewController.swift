@@ -89,22 +89,22 @@ class AlbumDetailViewController: UIViewController {
       guide = view.layoutMarginsGuide
     }
     regularHeightConstraints = [
-      largerImage.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
+      largerImage.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -16),
 
-      detailedInfoStack.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
       detailedInfoStack.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: 8),
+      detailedInfoStack.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -8),
       detailedInfoStack.topAnchor.constraint(equalTo: largerImage.bottomAnchor, constant: 8),
 
-      albumPageButton.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
       albumPageButton.topAnchor.constraint(greaterThanOrEqualTo: detailedInfoStack.bottomAnchor, constant: 8),
-      albumPageButton.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: 20)
+      albumPageButton.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: 20),
+      albumPageButton.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -20)
     ]
     compactHeightConstraints = [
-      largerImage.centerYAnchor.constraint(equalTo: guide.centerYAnchor),
+      largerImage.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -16),
 
       detailedInfoStack.leadingAnchor.constraint(equalTo: largerImage.trailingAnchor, constant: 8),
       detailedInfoStack.topAnchor.constraint(equalTo: guide.topAnchor, constant: 16),
-      detailedInfoStack.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -16),
+      detailedInfoStack.trailingAnchor.constraint(lessThanOrEqualTo: guide.trailingAnchor, constant: -16),
 
       albumPageButton.topAnchor.constraint(greaterThanOrEqualTo: detailedInfoStack.bottomAnchor, constant: 8),
       albumPageButton.leadingAnchor.constraint(equalTo: detailedInfoStack.leadingAnchor),
@@ -151,17 +151,11 @@ class AlbumDetailViewController: UIViewController {
   }
 
   private func setUpDetailedInfoStack() {
-    let name = UILabel.init(frame: .zero),
-    artist = UILabel.init(frame: .zero),
-    genre = UILabel.init(frame: .zero),
-    releaseDate = UILabel.init(frame: .zero),
-    copyright = UILabel.init(frame: .zero)
-
-    name.configureStyle()
-    artist.configureStyle()
-    genre.configureStyle()
-    releaseDate.configureStyle()
-    copyright.configureStyle()
+    let name = UILabel.newSimpleLabel(),
+    artist = UILabel.newSimpleLabel(),
+    genre = UILabel.newSimpleLabel(),
+    releaseDate = UILabel.newSimpleLabel(),
+    copyright = UILabel.newSimpleLabel()
 
     name.text = "Album Name: \(viewModel.name)"
     artist.text = "Artist: \(viewModel.artist)"

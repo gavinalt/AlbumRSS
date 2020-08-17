@@ -9,7 +9,7 @@
 import UIKit
 
 class AlbumListTableCell: UITableViewCell {
-  private var name: UILabel, artist: UILabel, artwork: UIImageView
+  private let name: UILabel, artist: UILabel, artwork: UIImageView
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     name = UILabel.init(frame: .zero)
@@ -40,17 +40,17 @@ class AlbumListTableCell: UITableViewCell {
     NSLayoutConstraint.activate([
       artwork.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
       artwork.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-      artwork.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-      artwork.widthAnchor.constraint(equalTo: artwork.heightAnchor),
-      contentView.heightAnchor.constraint(equalToConstant: 64),
+      artwork.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -8),
+      artwork.heightAnchor.constraint(equalTo: artwork.widthAnchor),
+      artwork.heightAnchor.constraint(equalToConstant: 48),
 
       name.leadingAnchor.constraint(equalTo: artwork.trailingAnchor, constant: 16),
-      name.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -8),
+      name.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
       name.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
 
-      artist.topAnchor.constraint(greaterThanOrEqualTo: name.bottomAnchor, constant: 4),
+      artist.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 4),
       artist.leadingAnchor.constraint(equalTo: name.leadingAnchor),
-      artist.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+      artist.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -8)
     ])
     artwork.setContentCompressionResistancePriority(.required, for: .horizontal)
   }

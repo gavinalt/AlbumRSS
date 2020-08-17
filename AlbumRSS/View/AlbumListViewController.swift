@@ -102,10 +102,6 @@ extension AlbumListViewController: UITableViewDataSource {
     cell.configureSelf(from: viewModel.albumViewModel(for: indexPath))
     return cell
   }
-
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    64
-  }
 }
 
 extension AlbumListViewController: UITableViewDelegate {

@@ -41,6 +41,7 @@ final class ImageDownloader {
       }
     }
 
+    completion(nil)
     let task = session.dataTask(with: url) { (data, _, _) in
       guard let data = data else {
         return completion(nil)

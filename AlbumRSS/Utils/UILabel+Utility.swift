@@ -18,4 +18,15 @@ extension UILabel {
     textAlignment = .left
     translatesAutoresizingMaskIntoConstraints = false
   }
+
+  class func newSimpleLabel(with fontSize: CGFloat = 13, textColor: UIColor = .black) -> UILabel {
+    let label = self.init(frame: .zero)
+    label.configureStyle(fontSize: fontSize, textColor: textColor)
+    return label
+  }
+
+  convenience init(with fontSize: CGFloat, textColor: UIColor) {
+    self.init(frame: .zero)
+    configureStyle(fontSize: fontSize, textColor: textColor)
+  }
 }
