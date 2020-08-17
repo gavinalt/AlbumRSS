@@ -30,6 +30,7 @@
 		8662594424E5812F0058ACEE /* RSSUrlConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662594324E5812F0058ACEE /* RSSUrlConstructor.swift */; };
 		8662594824E63EB30058ACEE /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662594724E63EB30058ACEE /* Results.swift */; };
 		8662594A24E6D2400058ACEE /* UILabel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662594924E6D2400058ACEE /* UILabel+Utility.swift */; };
+		8669755C24EAB3690010E43C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8669755B24EAB3690010E43C /* README.md */; };
 		86EC84C624E2EFA40026C7AA /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC84C524E2EFA40026C7AA /* Album.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		8662594324E5812F0058ACEE /* RSSUrlConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSUrlConstructor.swift; sourceTree = "<group>"; };
 		8662594724E63EB30058ACEE /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		8662594924E6D2400058ACEE /* UILabel+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Utility.swift"; sourceTree = "<group>"; };
+		8669755B24EAB3690010E43C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		86EC84C524E2EFA40026C7AA /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 		8610D9DF24E2E9DD00C998D6 = {
 			isa = PBXGroup;
 			children = (
+				8669755B24EAB3690010E43C /* README.md */,
 				8610D9EA24E2E9DD00C998D6 /* AlbumRSS */,
 				8610DA0124E2E9DF00C998D6 /* AlbumRSSTests */,
 				8610D9E924E2E9DD00C998D6 /* Products */,
@@ -279,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8669755C24EAB3690010E43C /* README.md in Resources */,
 				8610D9F824E2E9DF00C998D6 /* LaunchScreen.storyboard in Resources */,
 				8610D9F524E2E9DF00C998D6 /* Assets.xcassets in Resources */,
 			);
