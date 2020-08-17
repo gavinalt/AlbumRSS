@@ -1,0 +1,25 @@
+{
+  "artistName": "Pop Smoke",
+  "id": "1521889004",
+  "releaseDate": "2020-07-03",
+  "name": "Shoot for the Stars Aim for the Moon",
+  "kind": "album",
+  "copyright": "Victor Victor Worldwide; ℗ 2020 Republic Records, a division of UMG Recordings, Inc. & Victor Victor Worldwide",
+  "artistId": "1450601383",
+  "contentAdvisoryRating": "Explicit",
+  "artistUrl": "https://music.apple.com/us/artist/pop-smoke/1450601383?app=music",
+  "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/17/6d/e0/176de0c9-42a6-8741-9d22-6aae00094e1d/20UMGIM55833.rgb.jpg/200x200bb.png",
+  "genres": [
+    {
+      "genreId": "18",
+      "name": "Hip-Hop/Rap",
+      "url": "https://itunes.apple.com/us/genre/id18"
+    },
+    {
+      "genreId": "34",
+      "name": "Music",
+      "url": "https://itunes.apple.com/us/genre/id34"
+    }
+  ],
+  "url": "https://music.apple.com/us/album/shoot-for-the-stars-aim-for-the-moon/1521889004?app=music"
+}
