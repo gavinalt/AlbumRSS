@@ -184,7 +184,7 @@ class AlbumDetailViewController: UIViewController {
     albumPageButton.addTarget(self, action: #selector(openInItunes), for: .touchUpInside)
   }
 
-  @objc func openInItunes(sender: UIButton!) {
+  @objc func openInItunes(sender: UIButton) {
     guard let itunesUrl = viewModel.storePageUrl else { return }
     // open the album either in iTunes or Safari
     if UIApplication.shared.canOpenURL(itunesUrl) {
